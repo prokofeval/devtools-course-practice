@@ -57,10 +57,10 @@ TEST(Prokofeva_Liza_Complex_Number, Test_Equal_Mark) {
 }
 
 TEST(Prokofeva_Liza_Complex_Number, Test_Set) {
-    double re1 = 20.4748;
-    double im1 = 45.3435;
+    double re = 20.4748;
+    double im = 45.3435;
 
-    ComplexNumber first(re1, im1);
+    ComplexNumber first(re, im);
 
     first.setRe(20);
     first.setIm(45);
