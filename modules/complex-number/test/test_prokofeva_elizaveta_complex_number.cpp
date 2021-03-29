@@ -46,7 +46,7 @@ TEST(Prokofeva_Liza_Complex_Number, Test_Equal_Mark) {
 
     double re2 = 0.0;
     double im2 = 0.0;
- 
+
     ComplexNumber first(re1, im1);
     ComplexNumber second(re2, im2);
 
