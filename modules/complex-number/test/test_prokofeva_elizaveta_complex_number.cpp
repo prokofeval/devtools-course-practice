@@ -26,22 +26,16 @@ TEST(Prokofeva_Liza_Complex_Number, Test_Mult_And_Diff) {
     ASSERT_EQ(0, result.getIm());
 }
 
-TEST(Prokofeva_Liza_Complex_Number, Test_Assignment) {
-    ComplexNumber first(1.2728, 89.0375);
-    ComplexNumber second(0.0, 0.0);
-
-    second = first;
-
-    ASSERT_DOUBLE_EQ(first.getRe(), second.getRe());
-    ASSERT_DOUBLE_EQ(first.getIm(), second.getIm());
-}
-
-TEST(Prokofeva_Liza_Complex_Number, Test_Set) {
+TEST(Prokofeva_Liza_Complex_Number, Test_Set_And_Assigment) {
     ComplexNumber first(69.4266, -6.7813);
 
     first.setRe(20);
     first.setIm(45);
 
-    ASSERT_EQ(20, first.getRe());
-    ASSERT_EQ(45, first.getIm());
+    ComplexNumber second(0.0, 0.0);
+
+    second = first;
+
+    ASSERT_EQ(20, second.getRe());
+    ASSERT_EQ(45, second.getIm());
 }
