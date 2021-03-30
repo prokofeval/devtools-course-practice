@@ -5,34 +5,20 @@
 #include "include/complex_number.h"
 
 TEST(Prokofeva_Liza_Complex_Number, Test_Sum_And_Diff) {
-    double re1 = 1.5;
-    double im1 = 0.5;
+    ComplexNumber first(1.5, 0.5);
+    ComplexNumber second(2.5, 3.5);
+    ComplexNumber third(0.5, -0.5);
+    ComplexNumber fourth(-9.5, -7.5);
 
-    double re2 = 2.5;
-    double im2 = 3.5;
+    ComplexNumber result = (first + second) - (third - fourth);
 
-    double re3 = 0.5;
-    double im3 = -0.5;
-
-    ComplexNumber first(re1, im1);
-    ComplexNumber second(re2, im2);
-    ComplexNumber third(re3, im3);
-
-    ComplexNumber result = first + second - third;
-
-    ASSERT_DOUBLE_EQ(3.5, result.getRe());
-    ASSERT_DOUBLE_EQ(4.5, result.getIm());
+    ASSERT_DOUBLE_EQ(-6, result.getRe());
+    ASSERT_DOUBLE_EQ(-3, result.getIm());
 }
 
 TEST(Prokofeva_Liza_Complex_Number, Test_Mult_And_Diff) {
-    double re1 = 10.0;
-    double im1 = 2.9;
-
-    double re2 = 18.75;
-    double im2 = 23.46;
-
-    ComplexNumber first(re1, im1);
-    ComplexNumber second(re2, im2);
+    ComplexNumber first(10.0, 2.9);
+    ComplexNumber second(18.75, 23.46);
 
     ComplexNumber result = (second * first) / (first * second);
 
@@ -40,15 +26,9 @@ TEST(Prokofeva_Liza_Complex_Number, Test_Mult_And_Diff) {
     ASSERT_EQ(0, result.getIm());
 }
 
-TEST(Prokofeva_Liza_Complex_Number, Test_Equal_Mark) {
-    double re1 = 1.2;
-    double im1 = 2.3;
-
-    double re2 = 0.0;
-    double im2 = 0.0;
-
-    ComplexNumber first(re1, im1);
-    ComplexNumber second(re2, im2);
+TEST(Prokofeva_Liza_Complex_Number, Test_Assignment) {
+    ComplexNumber first(1.2728, 89.0375);
+    ComplexNumber second(0.0, 0.0);
 
     second = first;
 
@@ -57,10 +37,7 @@ TEST(Prokofeva_Liza_Complex_Number, Test_Equal_Mark) {
 }
 
 TEST(Prokofeva_Liza_Complex_Number, Test_Set) {
-    double re = 20.4748;
-    double im = 45.3435;
-
-    ComplexNumber first(re, im);
+    ComplexNumber first(69.4266, -6.7813);
 
     first.setRe(20);
     first.setIm(45);
