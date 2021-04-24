@@ -29,11 +29,11 @@ TEST(CalculateStatisticValues, Test_Variance)
 TEST(CalculateStatisticValues, Test_First_Starting_Moment)
 {
     int size = 5;
-    int n = 1;
+    int pow = 1;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
     std::vector<double> p = { 0.1, 0.2, 0.3, 0.4, 0.5 };
 
-    double result = statisticValues::calc_starting_moment(x, p, size, n);
+    double result = statisticValues::calc_starting_moment(x, p, size, pow);
     double correct = statisticValues::calc_mean_value(x, p, size);
 
     ASSERT_EQ(result, correct);
@@ -41,11 +41,11 @@ TEST(CalculateStatisticValues, Test_First_Starting_Moment)
 TEST(CalculateStatisticValues, Test_Second_Starting_Moment)
 {
     int size = 5;
-    int n = 2;
+    int pow = 2;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
     std::vector<double> p = { 0.1, 0.2, 0.3, 0.4, 0.5 };
 
-    double result = statisticValues::calc_starting_moment(x, p, size, n);
+    double result = statisticValues::calc_starting_moment(x, p, size, pow);
     double correct = 22.5;
 
     ASSERT_EQ(result, correct);
@@ -53,11 +53,11 @@ TEST(CalculateStatisticValues, Test_Second_Starting_Moment)
 TEST(CalculateStatisticValues, Test_Second_Central_Moment)
 {
     int size = 5;
-    int n = 2;
+    int pow = 2;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
     std::vector<double> p = { 0.1, 0.2, 0.3, 0.4, 0.5 };
 
-    double result = statisticValues::calc_central_moment(x, p, size, n);
+    double result = statisticValues::calc_central_moment(x, p, size, pow);
     double correct = statisticValues::calc_variance(x, p, size);
 
     ASSERT_EQ(result, correct);
@@ -65,11 +65,11 @@ TEST(CalculateStatisticValues, Test_Second_Central_Moment)
 TEST(CalculateStatisticValues, Test_Third_Central_Moment)
 {
     int size = 5;
-    int n = 3;
+    int pow = 3;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
     std::vector<double> p = { 0.1, 0.2, 0.3, 0.4, 0.5 };
 
-    double result = statisticValues::calc_central_moment(x, p, size, n);
+    double result = statisticValues::calc_central_moment(x, p, size, pow);
     double correct = -23.7875;
 
     ASSERT_EQ(result, correct);
