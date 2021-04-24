@@ -13,7 +13,7 @@ TEST(CalculateStatisticValues, Test_Mean_Value) {
     double result = statValues::meanValue(x, p, size);
     double correct = 5.5;
 
-    ASSERT_EQ(result, correct);
+    ASSERT_EQ(correct, result);
 }
 
 TEST(CalculateStatisticValues, Test_Variance) {
@@ -24,7 +24,7 @@ TEST(CalculateStatisticValues, Test_Variance) {
     double result = statValues::variance(x, p, size);
     double correct = 7.375;
 
-    ASSERT_EQ(result, correct);
+    ASSERT_EQ(correct, result);
 }
 
 TEST(CalculateStatisticValues, Test_First_Starting_Moment) {
@@ -36,7 +36,7 @@ TEST(CalculateStatisticValues, Test_First_Starting_Moment) {
     double result = statValues::start(x, p, size, pow);
     double correct = statValues::meanValue(x, p, size);
 
-    ASSERT_EQ(result, correct);
+    ASSERT_EQ(correct, result);
 }
 
 TEST(CalculateStatisticValues, Test_Second_Starting_Moment) {
@@ -48,7 +48,7 @@ TEST(CalculateStatisticValues, Test_Second_Starting_Moment) {
     double result = statValues::start(x, p, size, pow);
     double correct = 22.5;
 
-    ASSERT_EQ(result, correct);
+    ASSERT_EQ(correct, result);
 }
 
 TEST(CalculateStatisticValues, Test_Second_Central_Moment) {
@@ -60,7 +60,7 @@ TEST(CalculateStatisticValues, Test_Second_Central_Moment) {
     double result = statValues::centr(x, p, size, pow);
     double correct = statValues::variance(x, p, size);
 
-    ASSERT_EQ(result, correct);
+    ASSERT_EQ(correct, result);
 }
 
 TEST(CalculateStatisticValues, Test_Third_Central_Moment) {
@@ -72,5 +72,5 @@ TEST(CalculateStatisticValues, Test_Third_Central_Moment) {
     double result = statValues::centr(x, p, size, pow);
     double correct = -23.7875;
 
-    ASSERT_EQ(result, correct);
+    ASSERT_EQ(correct, result);
 }
