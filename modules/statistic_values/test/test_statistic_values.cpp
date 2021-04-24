@@ -4,8 +4,7 @@
 #include <vector>
 #include "include/statistic_values.h"
 
-TEST(CalculateStatisticValues, Test_Mean_Value)
-{
+TEST(CalculateStatisticValues, Test_Mean_Value) {
     int size = 5;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
     std::vector<double> p = { 0.1, 0.2, 0.3, 0.4, 0.5 };
@@ -15,8 +14,7 @@ TEST(CalculateStatisticValues, Test_Mean_Value)
 
     ASSERT_EQ(result, correct);
 }
-TEST(CalculateStatisticValues, Test_Variance)
-{
+TEST(CalculateStatisticValues, Test_Variance) {
     int size = 5;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
     std::vector<double> p = { 0.1, 0.2, 0.3, 0.4, 0.5 };
@@ -26,8 +24,7 @@ TEST(CalculateStatisticValues, Test_Variance)
 
     ASSERT_EQ(result, correct);
 }
-TEST(CalculateStatisticValues, Test_First_Starting_Moment)
-{
+TEST(CalculateStatisticValues, Test_First_Starting_Moment) {
     int size = 5;
     int pow = 1;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
@@ -38,8 +35,7 @@ TEST(CalculateStatisticValues, Test_First_Starting_Moment)
 
     ASSERT_EQ(result, correct);
 }
-TEST(CalculateStatisticValues, Test_Second_Starting_Moment)
-{
+TEST(CalculateStatisticValues, Test_Second_Starting_Moment) {
     int size = 5;
     int pow = 2;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
@@ -50,8 +46,7 @@ TEST(CalculateStatisticValues, Test_Second_Starting_Moment)
 
     ASSERT_EQ(result, correct);
 }
-TEST(CalculateStatisticValues, Test_Second_Central_Moment)
-{
+TEST(CalculateStatisticValues, Test_Second_Central_Moment) {
     int size = 5;
     int pow = 2;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
@@ -62,8 +57,7 @@ TEST(CalculateStatisticValues, Test_Second_Central_Moment)
 
     ASSERT_EQ(result, correct);
 }
-TEST(CalculateStatisticValues, Test_Third_Central_Moment)
-{
+TEST(CalculateStatisticValues, Test_Third_Central_Moment) {
     int size = 5;
     int pow = 3;
     std::vector<double> x = { 1, 2, 3, 4, 5 };
