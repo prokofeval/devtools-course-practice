@@ -4,36 +4,36 @@
 #include <cmath>
 #include "include/statistic_values.h"
 
-double statisticValues::calc_mean_value(std::vector<double> var, std::vector<double> p, int n) {
+double statValues::meanValue(vector<double> v, vector<double> p, int n) {
     double res = 0.0;
     for (int i = 0; i < n; i++) {
-        res += var[i] * p[i];
+        res += v[i] * p[i];
     }
     return res;
 }
 
-double statisticValues::calc_variance(std::vector<double> var, std::vector<double> p, int n) {
+double statValues::variance(vector<double> v, vector<double> p, int n) {
     double res = 0.0;
-    double mean_value = statisticValues::calc_mean_value(var, p, n);
+    double mean_value = statValues::meanValue(v, p, n);
     for (int i = 0; i < n; i++) {
-        res += p[i] * pow((var[i] - mean_value), 2);
+        res += p[i] * pow((v[i] - mean_value), 2);
     }
     return res;
 }
 
-double statisticValues::calc_starting_moment(std::vector<double> var, std::vector<double> p, int n, int k) {
+double statValues::start(vector<double> v, vector<double> p, int n, int k) {
     double res = 0.0;
     for (int i = 0; i < n; i++) {
-            res += pow(var[i], k) * p[i];
+            res += pow(v[i], k) * p[i];
     }
     return res;
 }
 
-double statisticValues::calc_central_moment(std::vector<double> var, std::vector<double> p, int n, int k) {
+double statValues::centr(vector<double> v, vector<double> p, int n, int k) {
     double res = 0.0;
-    double mean_value = statisticValues::calc_mean_value(var, p, n);
+    double mean_value = statValues::meanValue(v, p, n);
     for (int i = 0; i < n; i++) {
-        res += p[i] * pow((var[i] - mean_value), k);
+        res += p[i] * pow((v[i] - mean_value), k);
     }
     return res;
 }

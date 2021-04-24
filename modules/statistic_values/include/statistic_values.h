@@ -6,11 +6,11 @@
 #include <vector>
 using std::vector;
 
-namespace statisticValues {
-    double calc_mean_value(vector<double> var, vector<double> p, int n);
-    double calc_variance(vector<double> var, vector<double> p, int n);
-    double calc_starting_moment(vector<double> var, vector<double> p, int n, int k);
-    double calc_central_moment(vector<double> var, vector<double> p, int n, int k);
+namespace statValues {
+    double meanValue(vector<double> v, vector<double> p, int n);
+    double variance(vector<double> v, vector<double> p, int n);
+    double start(vector<double> v, vector<double> p, int n, int k);
+    double centr(vector<double> v, vector<double> p, int n, int k);
 }
 
 #endif  // MODULES_STATISTIC_VALUES_INCLUDE_STATISTIC_VALUES_H_
