@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <cmath>
+
 #include "include/statistic_values.h"
 
 double statValues::meanValue(vector<double> v, vector<double> p, int n) {
