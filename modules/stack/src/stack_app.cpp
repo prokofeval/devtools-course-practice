@@ -1,6 +1,5 @@
 // Copyright 2021 Prokofeva Elizaveta
 
-#include "include/stack.h"
 #include "include/stack_app.h"
 
 #include <cstring>
@@ -8,6 +7,7 @@
 #include <stdexcept>
 #include <string>
 
+#include "include/stack.h"
 
 StackApp::StackApp() : message_("") {}
 
