@@ -49,6 +49,7 @@ std::string StackApp::operator()(int argc, const char** argv) {
     if (!validateNumberOfArguments(argc, argv)) {
         return message_;
     }
+
     std::ostringstream stream;
     try {
         int arg = 1;
