@@ -56,7 +56,7 @@ std::string StackApp::operator()(int argc, const char** argv) {
             std::string op = argv[arg];
             if (op == "peek") {
                 stack.peek();
-                stream <<"Last element: "<< std::to_string(stack.peek()) << "\n";
+                stream << std::to_string(stack.peek()) << "\n";
             } else if (op == "pop") {
                 stack.pop();
             } else if (op == "push") {
